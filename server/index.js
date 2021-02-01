@@ -6,7 +6,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 app.use(express.static('public'))
 
-app.use('/propId/:id', createProxyMiddleware({ target: 'http://localhost:1984', changeOrigin: true }))
+app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://localhost:1984', changeOrigin: true }))
 
 app.listen(port, () => {
   console.log(`Listening at port ${port}.`)
