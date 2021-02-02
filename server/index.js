@@ -8,6 +8,8 @@ app.use(express.static('public'))
 
 app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://localhost:1984', changeOrigin: true }))
 
+app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://localhost:1985', changeOrigin: true }))
+
 app.listen(port, () => {
   console.log(`Listening at port ${port}.`)
 })
