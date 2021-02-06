@@ -4,7 +4,7 @@ const port = 3000;
 const axios = require('axios')
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-app.use(express.static('public'))
+app.use('/rooms/:id', express.static('public'))
 
 // REVIEWS
 app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://localhost:1984', changeOrigin: true }))
