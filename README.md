@@ -1,6 +1,6 @@
 # Proxy for Airbnb Clones
 
-I built this project from scratch to clone an Airbnb product page carousel. It displays an array of 12 houses, showing 4 houses at a time, and rotates continuously between the first and last turn cycles when clicked. Made with Express, React, and Node, and deployed using Amazon EC2.
+I built this project from scratch to practice using middleware to reroute client-server api requests for my other apps, and display two apps on one page at the same time. Made with Express and Node, and deployed using Amazon EC2 and S3 services.
 
 ## Live Demo Links
 
