@@ -8,10 +8,6 @@ const path = require('path')
 
 app.use(cors())
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
-})
-
 // DANE
 app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://ec2-54-221-114-185.compute-1.amazonaws.com:5001', changeOrigin: true }))
 
@@ -27,6 +23,10 @@ app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://3.22.194.
 
 // app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://localhost:1985', changeOrigin: true }))
 app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://18.222.249.216:1985', changeOrigin: true }))
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
+})
 
 app.listen(port, () => {
   console.log(`Listening at port ${port}.`)
