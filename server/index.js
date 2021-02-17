@@ -5,7 +5,8 @@ const axios = require('axios')
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const cors = require('cors')
 
-app.use('/rooms/:id', express.static('public'))
+// app.use('/rooms/:id', express.static('public'))
+app.use(express.static('public'))
 app.use(cors())
 
 // DANE
