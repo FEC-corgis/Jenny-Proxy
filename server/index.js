@@ -11,9 +11,9 @@ const path = require('path')
 app.use(cors())
 
 // DANE
-app.use('/api/headerService/:id', createProxyMiddleware({ target: 'http://ec2-54-221-114-185.compute-1.amazonaws.com:5001/api/headerService/:id', changeOrigin: true }))
+app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://ec2-54-221-114-185.compute-1.amazonaws.com:5001', changeOrigin: true }))
 
-app.use('/api/hostedByService/:id', createProxyMiddleware({ target: 'http://ec2-54-166-79-249.compute-1.amazonaws.com:5002/api/hostedByService/:id', changeOrigin: true }))
+app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://ec2-54-166-79-249.compute-1.amazonaws.com:5002', changeOrigin: true }))
 
 // PAULY
 // app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://localhost:5545', changeOrigin: true }))
