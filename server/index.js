@@ -9,7 +9,9 @@ app.use('/rooms/:id', express.static('public'))
 app.use(cors())
 
 // DANE
-app.use('/api/headerService/:id', createProxyMiddleware({ target: 'http://ec2-52-91-225-129.compute-1.amazonaws.com', changeOrigin: true }))
+app.use('/api/headerService/:id', createProxyMiddleware({ target: 'http://ec2-54-221-114-185.compute-1.amazonaws.com:5001/api/headerService/:id', changeOrigin: true }))
+
+app.use('/api/hostedByService/:id', createProxyMiddleware({ target: 'http://ec2-54-166-79-249.compute-1.amazonaws.com:5002/api/hostedByService/:id', changeOrigin: true }))
 
 // PAULY
 // app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://localhost:5545', changeOrigin: true }))
