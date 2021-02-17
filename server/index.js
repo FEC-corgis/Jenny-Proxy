@@ -4,9 +4,10 @@ const port = 3000;
 const axios = require('axios')
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const cors = require('cors')
+const path = require('path')
 
 // app.use('/rooms/:id', express.static('public'))
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use(cors())
 
 // DANE
@@ -24,6 +25,10 @@ app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://3.22.194.
 
 // app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://localhost:1985', changeOrigin: true }))
 app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://18.222.249.216:1985', changeOrigin: true }))
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
+})
 
 app.listen(port, () => {
   console.log(`Listening at port ${port}.`)
