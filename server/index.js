@@ -11,7 +11,7 @@ app.use(cors())
 // DANE
 app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://ec2-34-228-69-178.compute-1.amazonaws.com:5001', changeOrigin: true }))
 
-app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://ec2-54-166-79-249.compute-1.amazonaws.com:5002', changeOrigin: true }))
+app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://ec2-18-207-211-57.compute-1.amazonaws.com:5002', changeOrigin: true }))
 
 // PAULY
 // app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://localhost:5545', changeOrigin: true }))
