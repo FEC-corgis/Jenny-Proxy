@@ -9,7 +9,7 @@ const path = require('path')
 app.use(cors())
 
 // DANE
-app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://ec2-54-221-114-185.compute-1.amazonaws.com:5001', changeOrigin: true }))
+app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://ec2-34-228-69-178.compute-1.amazonaws.com:5001', changeOrigin: true }))
 
 app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://ec2-54-166-79-249.compute-1.amazonaws.com:5002', changeOrigin: true }))
 
