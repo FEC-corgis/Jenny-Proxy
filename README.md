@@ -2,11 +2,12 @@
 
 I built this project from scratch to practice using middleware to reroute client-server api requests for my other apps, and display two apps on one page at the same time. Made with Express and Node, and deployed using Amazon EC2 and S3 services.
 
-## Live Demo Links
+### Click [here](https://drive.google.com/file/d/1mt6DU9qSAPfE5dULvrw0HqkH4PqjrBEu/view?usp=sharing) for demo!
 
-  - Proxy: http://3.128.186.14:3000/rooms/80/
-  - Reviews: http://3.22.194.10:1984/rooms/80/
-  - Carousel: http://18.222.249.216:1985/rooms/80/
+<!-- ## Live Demo Links
+
+  - Reviews: [link]
+  - Proxy: [link] -->
 
 ## Setup on Local
 
