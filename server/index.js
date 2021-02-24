@@ -11,7 +11,7 @@ app.use(cors())
 // DANE
 app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://54.211.95.226:5001', changeOrigin: true }))
 
-app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://172.31.81.241:5002', changeOrigin: true }))
+app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://54.237.132.122:5002', changeOrigin: true }))
 
 // PAULY
 // app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://localhost:5545', changeOrigin: true }))
