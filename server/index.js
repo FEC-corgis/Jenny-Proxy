@@ -9,20 +9,22 @@ const path = require('path')
 app.use(cors())
 
 // DANE
-app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://ec2-34-228-69-178.compute-1.amazonaws.com:5001', changeOrigin: true }))
+app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http://54.211.95.226:5001', changeOrigin: true }))
 
-app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://ec2-18-207-211-57.compute-1.amazonaws.com:5002', changeOrigin: true }))
+app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://172.31.81.241:5002', changeOrigin: true }))
 
 // PAULY
 // app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://localhost:5545', changeOrigin: true }))
-app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://54.176.104.176:5545', changeOrigin: true }))
+app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://13.56.218.102:5545', changeOrigin: true }))
+
+app.use('/map/:pId', createProxyMiddleware({ target: 'http://54.215.197.139:4454/', changeOrigin: true }))
 
 // JENNY
 // app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://localhost:1984', changeOrigin: true }))
-app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://3.22.194.10:1984', changeOrigin: true }))
+app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://3.20.69.232:1984', changeOrigin: true }))
 
 // app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://localhost:1985', changeOrigin: true }))
-app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://18.222.249.216:1985', changeOrigin: true }))
+app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://3.140.48.105:1985', changeOrigin: true }))
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
