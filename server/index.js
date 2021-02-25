@@ -14,7 +14,6 @@ app.use('/api/headerService/:propertyId', createProxyMiddleware({ target: 'http:
 app.use('/api/hostedByService/:propertyId', createProxyMiddleware({ target: 'http://54.237.132.122:5002', changeOrigin: true }))
 
 // PAULY
-// app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://localhost:5545', changeOrigin: true }))
 app.use('/propertyDetails/:pId', createProxyMiddleware({ target: 'http://13.56.218.102:5545', changeOrigin: true }))
 
 app.use('/map/:pId', createProxyMiddleware({ target: 'http://54.215.197.139:4454/', changeOrigin: true }))
