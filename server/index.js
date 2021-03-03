@@ -20,10 +20,10 @@ app.use('/map/:pId', createProxyMiddleware({ target: 'http://54.215.197.139:4454
 
 // JENNY
 // app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://localhost:1984', changeOrigin: true }))
-app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://3.20.69.232:1984', changeOrigin: true }))
+app.use('/reviews/propId/:id', createProxyMiddleware({ target: 'http://52.15.83.247:1984', changeOrigin: true }))
 
 // app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://localhost:1985', changeOrigin: true }))
-app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://3.140.48.105:1985', changeOrigin: true }))
+app.use('/morePlaces/propId/:id', createProxyMiddleware({ target: 'http://3.18.223.111:1985', changeOrigin: true }))
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
